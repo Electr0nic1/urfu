@@ -1,3 +1,17 @@
+@font-face { 
+  font-family: "MontRegular";
+  src: url("../fonts/MontRegular.woff") format("woff");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face { 
+  font-family: "MontSemiBold";
+  src: url("../fonts/MontSemiBold.woff") format("woff");
+  font-style: normal;
+  font-weight: 600;
+}
+
 html,
 body {
   height: 100%;
@@ -5,11 +19,9 @@ body {
 
 body {
   color: #fff;
-  font-family: 'Mont', sans-serif;
+  font-family: "MontSemiBold", sans-serif;
   font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 21.6px;
+  line-height: 1.15;
   background-image: url(../images/main-bg.png);
   background-repeat: no-repeat;
   background-position: center;
@@ -28,6 +40,10 @@ body {
 }
 
 /* header */
+
+.header {
+  margin-bottom: 52vh;
+}
 
 .header__inner {
   display: flex;
@@ -62,4 +78,42 @@ body {
 
 .main {
   flex-grow: 1;
+}
+
+/* progrmam */
+
+.program__inner {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.program__box {
+  grid-column: 1 / 2;
+}
+
+.program__box-title {
+  font-size: 94px;
+  font-weight: 600;
+  
+}
+
+.program__box-title--small {
+  margin-top: 5vh;
+  font-size: 52px;
+  display: inline-block;
+}
+
+.program__descr {
+  grid-column: 2 / 3;
+  font-size: 24px;
+  padding: 10% 0 0 35%;
+}
+
+.program__descr-text {
+  margin-bottom: 35px;
+}
+
+.program__descr-link {
+  text-decoration: underline;
+  text-underline-offset: 10px;
 }
