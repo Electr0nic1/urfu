@@ -76,13 +76,15 @@
       <section class="enrollment">
         <div class="container">
           <div class="enrollment__inner">
-            <h2 class="enrollment__title">Как поступить?</h2>
-            <label class="toggle-switch">
-              <input type="checkbox">
-              <div class="toggle-switch-background">
-                <div class="toggle-switch-handle"></div>
+            <div class="enrollment__box">
+              <h2 class="enrollment__box-title">Как поступить?</h2>
+              <div class="form-toggle">
+                <p class="form-toggle__text form-toggle__text--active" id="budget_text">Бюджет</p>
+                <input type="checkbox" id="form-toggle">
+                <label for="form-toggle"></label>
+                <p class="form-toggle__text" id="contract_text">Контракт</p>
               </div>
-            </label>
+            </div>
             <div class="enrollment__steps">
               <div class="enrollment__step">
                 <h3 class="enrollment__step-title">Узнайте о поступлении</h3>
@@ -91,8 +93,10 @@
                   <li class="enrollment__step-item">Сроки подачи документов</li>
                 </ul>
                 <div class="enrollment__step-details">
-                  <p class="enrollment__step-form">Очная форма обучения:<br><span class="enrollment__step-date">20.06 - 08.08</span></p>
-                  <p class="enrollment__step-form">Очно-заочная форма обучения:<br><span class="enrollment__step-date">20.06 - 08.08</span></p>
+                  <p class="enrollment__step-form">Очная форма обучения:<br></p>
+                  <p class="enrollment__step-date" id="full-time_enrollment">20.06 - 08.08</p>
+                  <p class="enrollment__step-form  distance_text">Очно-заочная форма обучения:<br></p>
+                  <p class="enrollment__step-date" id="distance_enrollment">20.06 - 08.08</p>
                 </div>
               </div>
               <div class="enrollment__step">
@@ -115,8 +119,10 @@
                   <li class="enrollment__step-item">Период сдачи вступительных испытаний</li>
                 </ul>
                 <div class="enrollment__step-details">
-                  <p class="enrollment__step-form">Очная форма обучения:<br><span class="enrollment__step-date">04.07 - 13.08</span></p>
-                  <p class="enrollment__step-form">Очно-заочная форма обучения:<br><span class="enrollment__step-date">04.07 - 13.09 и 22.08 - 12.09</span></p>
+                  <p class="enrollment__step-form">Очная форма обучения:<br></p>
+                  <p class="enrollment__step-date" id="full-time_entrance">04.07 - 13.08</p>
+                  <p class="enrollment__step-form  distance_text">Очно-заочная форма обучения:<br></p>
+                  <p class="enrollment__step-date" id="distance_entrance">04.07 - 13.09 и 22.08 - 12.09</p>
                 </div>
               </div>
             </div>
@@ -126,5 +132,7 @@
     </main>
     <footer class="footer"></footer>
   </div>
+
+  <script src="main.js"></script>
 </body>
 </html>

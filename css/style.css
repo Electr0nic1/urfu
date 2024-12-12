@@ -60,6 +60,63 @@ body {
   width: 50%; 
 }
 
+label {
+  width: 54px;
+  height: 26px;
+  position: relative;
+  display: block;
+  background: #1E4391;
+  border-radius: 16px;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+label:after {
+  content: "";
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  background: #fff;
+  border-radius: 19px;
+  box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+input {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+input:checked + label:after {
+  left: 32px;
+}
+
+.form-toggle {
+  display: flex;
+  flex-direction: row;
+  margin-top: 25px;
+}
+
+.form-toggle__text {
+  font-family: "MontSemiBold";
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 29px;
+  color: rgba(34, 34, 34, 0.4);
+}
+
+.form-toggle__text--active {
+  color: #1E4391;
+}
+
+.form-toggle__text:nth-child(1) {
+  margin-right: 20px;
+}
+
+
 /* header */
 
 .header {
@@ -263,6 +320,13 @@ body {
 
 .enrollment {
   margin-bottom: 60px;
+  min-height: 410px;
+}
+
+.enrollment__box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .enrollment__steps {
@@ -271,7 +335,7 @@ body {
   gap: 20px;
 }
 
-.enrollment__title {
+.enrollment__box-title {
   font-size: 52px;
   font-family: "MontSemiBold";
   font-weight: 600;
@@ -285,6 +349,7 @@ body {
   font-family: "MontSemiBold";
   font-weight: 600;
   margin-left: 60px;
+  margin-bottom: -2px;
   min-height: 43px;
   display: flex;
   align-items: center;
@@ -398,11 +463,14 @@ body {
   font-size: 14px;
   line-height: 20px;
   color: rgba(0, 0, 0, 0.6);
-  margin-bottom: 11px;
 }
 
 .enrollment__step-date {
+  font-size: 14px;
+  line-height: 20px;
   color: rgba(30, 67, 145, 0.8);
+  margin-left: 60px;
+  margin-bottom: 11px;
 }
 
 .footer {
