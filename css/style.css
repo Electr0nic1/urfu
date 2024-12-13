@@ -30,7 +30,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  
+
 }
 
 .wrapper {
@@ -239,7 +239,7 @@ input:checked + label:after {
 /* about */
 
 .about {
-  padding-top: 120px;
+  padding-top: 100px;
   margin-bottom: 120px;
   color: #1E4391;
 }
@@ -260,6 +260,7 @@ input:checked + label:after {
   width: 368px;
   white-space: normal;
   font-size: 16px;
+  line-height: 22px;
   color: #222222;
   margin-bottom: 24px;
 }
@@ -345,6 +346,7 @@ input:checked + label:after {
 
 .about__data-text {
   font-size: 16px;
+  line-height: 22px;
   color: #000;
 }
 
