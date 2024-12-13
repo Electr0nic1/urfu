@@ -26,11 +26,10 @@ body {
   font-family: "MontRegular", sans-serif;
   font-size: 18px;
   line-height: 1.15;
-  background-image: url(../images/main-bg.png);
+  background-image: url(../images/main-bg.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-
 }
 
 .wrapper {
@@ -121,7 +120,6 @@ input:checked + label:after {
 .form-toggle__text:nth-child(1) {
   margin-right: 20px;
 }
-
 
 /* header */
 
@@ -444,12 +442,24 @@ input:checked + label:after {
   background-color: #EF302B;
 }
 
-:is(.enrollment__step:nth-child(2), .enrollment__step:nth-child(3), .enrollment__step:nth-child(4)) .enrollment__step-list::before {
+:is(.enrollment__step:nth-child(2), .enrollment__step:nth-child(3)) .enrollment__step-list::before {
   height: 50%;
 }
 
 .enrollment__step:nth-child(3) .enrollment__step-item::before {
   border: 2px solid #EF302B;
+}
+
+.enrollment__step:nth-child(4) .enrollment__step-item:nth-child(2){
+  color: transparent;
+}
+
+.enrollment__step:nth-child(4) .enrollment__step-list::before{
+  height: 90%;
+}
+
+.enrollment__step:nth-child(4) .enrollment__step-details {
+  margin-top: -45px;
 }
 
 .enrollment__step-item {
@@ -482,6 +492,7 @@ input:checked + label:after {
 .enrollment__step-link {
   margin-left: 60px;
   margin-top: 16px;
+  font-size: 14px;
   font-family: "MontSemiBold";
   font-weight: 600;
   color: #1E4391;
