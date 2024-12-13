@@ -12,6 +12,10 @@
   font-weight: 600;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 html,
 body {
   height: 100%;
@@ -26,6 +30,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  
 }
 
 .wrapper {
@@ -38,6 +43,7 @@ body {
   max-width: 1600px;
   padding: 0 40px;
   margin: 0 auto;
+  width: 100%;
 }
 
 .link {
@@ -120,13 +126,37 @@ input:checked + label:after {
 /* header */
 
 .header {
-  margin-bottom: 52vh;
+  /* margin-bottom: 52vh; */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.header > .container {
+  height: 100%;
+}
+
+.header--hidden {
+  transform: translateY(-100%);
+}
+
+.header--transparent {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
 }
 
 .header__inner {
   display: flex;
   flex-direction: row;
   align-items: center;
+  height: 100%;
 }
 
 .header__menu-list {
@@ -171,6 +201,7 @@ input:checked + label:after {
 
 .program {
   margin-bottom: 60px;
+  margin-top: calc(52vh + 90px);
 }
 
 .program__inner {
@@ -208,7 +239,7 @@ input:checked + label:after {
 /* about */
 
 .about {
-  margin-top: 180px;
+  padding-top: 120px;
   margin-bottom: 120px;
   color: #1E4391;
 }
@@ -236,6 +267,7 @@ input:checked + label:after {
 .about__box-link {
   font-family: "MontSemiBold";
   font-weight: 600;
+  cursor: pointer;
 }
 
 .about__box-link::after {

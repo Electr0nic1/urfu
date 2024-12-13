@@ -34,3 +34,26 @@ formToggle.addEventListener("change", function () {
     contractText.classList.remove("form-toggle__text--active");
   }
 });
+
+
+const header = document.getElementById("header");
+let lastScrollPosition = 0;
+
+window.addEventListener("scroll", () => {
+  const currentScrollPosition = window.pageYOffset;
+
+  if (currentScrollPosition > lastScrollPosition) {
+    header.classList.add("header--hidden");
+    header.classList.remove("header--transparent");
+  } else {
+    header.classList.remove("header--hidden");
+    header.classList.add("header--transparent");
+  }
+
+  if (currentScrollPosition > 0) {
+    header.classList.add("header--transparent");
+  } else {
+    header.classList.remove("header--transparent");
+  }
+  lastScrollPosition = currentScrollPosition;
+});
